@@ -66,14 +66,21 @@ export class HttpClient {
 
     async post<T, B>(url: string, body: B, authRequired: boolean = true): Promise<T> {
         const headers = await this.getHeader(authRequired);
+    
+        if (body instanceof FormData) {
+            delete headers["Content-Type"];
+        }
+    
         const response = await fetch(`${this.baseUrl}/${url}`, {
             headers: headers,
             method: "POST",
-            body: JSON.stringify(body),
+            body: body instanceof FormData ? body : JSON.stringify(body),
         });
+    
         return this.handleResponse(response);
     }
-
+    
+    
     async put<T, B>(url: string, body: B, authRequired: boolean = true): Promise<T> {
         const headers = await this.getHeader(authRequired);
         const response = await fetch(`${this.baseUrl}/${url}`, {

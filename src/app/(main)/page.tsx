@@ -11,7 +11,7 @@ export default function Main() {
         </div>
         <div className="flex gap-2 ">
           <Link href="/login"><Button sx={{ "color": "black", "fontSize": "1em" }} variant="plain"> Iniciar sesión </Button></Link>
-          <Link href="/login"><Button
+          <Link href="/register"><Button
             sx={{
               "color": "white", "bgcolor": "black", "fontSize": "1em",
               "&: hover": {

@@ -3,6 +3,9 @@ import { PAuth } from "@/app/core/application/ports/auth.port";
 import { HttpClient } from "../utils/httpClient";
 
 export class AuthService implements PAuth {
+    register(formData: FormData) {
+        throw new Error("Method not implemented.");
+    }
     private clientHttp: HttpClient
     private basePath: string = "auth";
 

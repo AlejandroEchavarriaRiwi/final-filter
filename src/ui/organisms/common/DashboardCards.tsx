@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import CardDashboard from "@/ui/organisms/common/CardDashboard";
 import { ProjectsService } from "@/app/infrastructure/services/project.service";
-import { Calendar } from "lucide-react";
+import { Calendar, FolderOpen, SignalMedium, Users } from "lucide-react";
 
 const projectsService = new ProjectsService();
 
@@ -52,10 +52,10 @@ const DashboardCards: React.FC = () => {
 
   return (
     <div className="grid grid-cols-4 pt-6 pr-6 pl-6 gap-5">
-      <CardDashboard title="Total Proyectos" icon={<Calendar />} number={totalProjects} />
-      <CardDashboard title="Proyectos Activos" icon={<Calendar />} number={activeProjects} />
-      <CardDashboard title="Organizadores" icon={<Calendar />} number={organizersCount} />
-      <CardDashboard title="Próximo Proyecto" icon={<Calendar />} number={nextProjectDate} />
+      <CardDashboard title="Total Proyectos" icon={<FolderOpen size={20} />} number={totalProjects} />
+      <CardDashboard title="Proyectos Activos" icon={<SignalMedium size={20}  />} number={activeProjects} />
+      <CardDashboard title="Organizadores" icon={<Users size={20}  />} number={organizersCount} />
+      <CardDashboard title="Próximo Proyecto" icon={<Calendar size={20} />} number={nextProjectDate} />
     </div>
   );
 };
