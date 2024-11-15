@@ -7,7 +7,7 @@ export default function Main() {
       {/* Header */}
       <header className="p-7 flex justify-between items-center ">
         <div className="flex items-center space-x-4">
-          <h1 className="text-2xl font-bold text-blue-700">VolunteerConecct</h1>
+          <h1 className="text-2xl font-bold text-blue-700">VolunteerConecct.</h1>
         </div>
         <div className="flex gap-2 ">
           <Link href="/login"><Button sx={{ "color": "black", "fontSize": "1em" }} variant="plain"> Iniciar sesión </Button></Link>
